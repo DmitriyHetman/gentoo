@@ -7,8 +7,6 @@ EAPI=6
 
 DESCRIPTION="A completely OpenSourced alternative to the OpenGL Utility Toolkit (GLUT) library"
 HOMEPAGE="http://freeglut.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ~arm64 hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
@@ -30,7 +28,8 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
   wayland? dev-libs/wayland
   wayland? x11-libs/libxkbcommon"
-SRC_URI=git://github.com/dcnieho/FreeGLUT.git
+SRC_URI="git://github.com/dcnieho/FreeGLUT.git"
+cd freeglut/freeglut
 HTML_DOCS=( doc/. )
 
 src_configure() {
